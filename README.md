@@ -1,5 +1,5 @@
 ![GitHub](https://img.shields.io/github/license/kenlog/Converter?style=flat-square)
-[![Latest release](https://img.shields.io/github/release/kenlog/Converter.svg)](https://github.com/kenlog/Converter/releases)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/kenlog/Converter?style=flat-square)
 
 # Converter :page_facing_up: :arrows_counterclockwise: :page_with_curl:
 Simple XML to CSV converter written in PHP 
