@@ -1,5 +1,5 @@
-# Converter
-Simple XML to CSV converter written in PHP
+# Converter :page_facing_up: :arrows_counterclockwise: :page_with_curl:
+Simple XML to CSV converter written in PHP 
 
 ## Getting Started
 
