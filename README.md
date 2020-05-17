@@ -1,5 +1,5 @@
 # Converter
-Simple XML to CSV converter
+Simple XML to CSV converter written in PHP
 
 ## Getting Started
 
