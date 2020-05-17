@@ -1,0 +1,28 @@
+{
+    "name": "kenlog/converter",
+    "description": "Simple XML to CSV converter",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Valentino Pesce",
+            "email": "valentino@iltuobrand.it",
+            "homepage": "https://github.com/kenlog",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^7.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kenlog\\": "src/"
+        }
+    },
+    "require-dev": {
+        "codeception/codeception": "^4.1",
+        "codeception/module-phpbrowser": "^1.0.0",
+        "codeception/module-asserts": "^1.0.0"
+    }
+}

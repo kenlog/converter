@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Products>
+    <Product>
+        <Code>X123457</Code>
+        <Description>Product 1 description</Description>
+        <Um>pz</Um>
+        <Qty>100</Qty>
+    </Product>
+    <Product>
+        <Code>X7894561</Code>
+        <Description>Product 2 description</Description>
+        <Um>pz</Um>
+        <Qty>70</Qty>
+    </Product>
+    <Product>
+        <Code>X1112489</Code>
+        <Description>Product 3 description</Description>
+        <Um>pz</Um>
+        <Qty>1000</Qty>
+    </Product>
+</Products>
