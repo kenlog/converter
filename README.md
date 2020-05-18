@@ -12,16 +12,15 @@ by default composer will download the latest stable version.
 composer require kenlog/converter
 ```
 
-## Usage -> [examples](examples)
-```php
+## Usage - [examples](examples)
 
-<?php 
+### Example conversion to CSV
+```php
+<?php
 
 require 'vendor/autoload.php';
 
 use Kenlog\Converter;
-
-/* Example conversion to CSV */
 
 // @constructor new Converter(string $xml);
 $converterCSV = new Converter('products.xml');
@@ -35,8 +34,15 @@ if ($converterCSV->success) {
 } else {
     echo 'The XML file was not converted to CSV';
 }
+```
 
-/* Example conversion to JSON */
+### Example conversion to JSON
+```php
+<?php
+
+require 'vendor/autoload.php';
+
+use Kenlog\Converter;
 
 // @constructor new Converter(string $xml);
 $converterJSON = new Converter('products.xml');
@@ -50,8 +56,15 @@ if ($converterJSON->success) {
 } else {
     echo 'The XML file was not converted to JSON';
 }
+```
 
-/* Example conversion to Array */
+### Example conversion to Array 
+```php
+<?php
+
+require 'vendor/autoload.php';
+
+use Kenlog\Converter;
 
 // @constructor new Converter(string $xml);
 $converterArray = new Converter('products.xml');
@@ -62,11 +75,10 @@ $products = $converterArray->getArray();
 // The result will be an array containing all records
 foreach ($products['Product'] as $product) {
     echo $product['Code'] . PHP_EOL;
-    echo $product['Description']. PHP_EOL;
-    echo $product['Um']. PHP_EOL;
-    echo $product['Qty']. PHP_EOL;
+    echo $product['Description'] . PHP_EOL;
+    echo $product['Um'] . PHP_EOL;
+    echo $product['Qty'] . PHP_EOL;
 }
-
 ```
 
 ## Author
