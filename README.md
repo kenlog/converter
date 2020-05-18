@@ -81,6 +81,16 @@ foreach ($products['Product'] as $product) {
 }
 ```
 
+:construction_worker: Any contribution will be highly appreciated
+------------
+Clone the repository: 
+```console 
+git clone https://github.com/kenlog/converter.git
+```
+:bug: Issues
+------------
+Please [create an issue](https://github.com/kenlog/converter/issues) for any bugs you've found.
+
 ## Author
 
 * **Valentino Pesce** - [Kenlog](https://github.com/kenlog)
