@@ -24,13 +24,6 @@ class Converter
     public $xml;
     
     /**
-     * csv
-     *
-     * @var string
-     */
-    public $csv;
-    
-    /**
      * success
      *
      * @var bool
@@ -42,33 +35,32 @@ class Converter
      * __construct
      *
      * @param  string $xml
-     * @param  string $csv
      * @return resource
      */
-    public function __construct(string $xml, string $csv)
+    public function __construct(string $xml)
     {
-        if (!empty($xml) && !empty($csv)) {
+        if (!empty($xml)) {
             $this->xml = simplexml_load_file($xml);
-            $this->csv = $csv;
         }
     }
        
     /**
      * setCSV
      *
+     * @param  string $csv
      * @param  string $xpath
      * @param  array $columns
      * @param  string $separator
      * @param  int $skipLines
      * @return bool
      */
-    public function setCSV(string $xpath, array $columns, string $separator = ',', int $skipLines = 0)
+    public function setCSV(string $csv, string $xpath, array $columns, string $separator = ',', int $skipLines = 0)
     {
-        if (isset($this->xml) && !empty($xpath) && !empty($columns))  {   
+        if (isset($this->xml, $csv) && !empty($xpath) && !empty($columns))  {  
             $i = $skipLines + 1;
             $values = [];
          
-            $fs = fopen($this->csv, 'w');
+            $fs = fopen($csv, 'w');
             fputcsv($fs, $columns, $separator);      
             fclose($fs);
         
@@ -81,7 +73,7 @@ class Converter
                     }
                 }
                 
-                $fs = fopen($this->csv, 'a');
+                $fs = fopen($csv, 'a');
                 fputcsv($fs, $values, $separator);      
                 fclose($fs);  
          
@@ -90,6 +82,33 @@ class Converter
             }
 
             return $this->success = true;
+        }
+    }
+    
+    /**
+     * setJSON
+     *
+     * @param  string $jsonFile
+     * @return bool
+     */
+    public function setJSON(string $jsonFile)
+    {
+        if (isset($this->xml) && !empty($jsonFile)) {
+            $json = json_encode($this->xml);
+            json_decode(file_put_contents($jsonFile,$json),true);
+            $this->success = true;
+        }
+    }
+    
+    /**
+     * getArray
+     *
+     * @return array
+     */
+    public function getArray()
+    {
+        if (isset($this->xml)) {
+            return json_decode(json_encode((array)$this->xml), 1);
         }
     }
 }
