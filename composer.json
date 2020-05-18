@@ -1,6 +1,6 @@
 {
     "name": "kenlog/converter",
-    "description": "Simple XML to CSV converter",
+    "description": "Simple converter from XML to CSV or JSON or Array",
     "type": "library",
     "license": "MIT",
     "authors": [
