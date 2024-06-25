@@ -1,5 +1,6 @@
 ![GitHub](https://img.shields.io/github/license/kenlog/Converter?style=flat-square)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/kenlog/Converter?style=flat-square)
+![Packagist Downloads](https://img.shields.io/packagist/dt/kenlog/converter)
 
 # Converter :page_facing_up: :arrows_counterclockwise: :page_with_curl:
 Simple converter from XML to CSV or JSON or Array
